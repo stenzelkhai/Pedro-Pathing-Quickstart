@@ -10,10 +10,10 @@ import org.firstinspires.ftc.teamcode.pedroPathing.localization.Pose;
 import org.firstinspires.ftc.teamcode.pedroPathing.pathGeneration.MathFunctions;
 import org.firstinspires.ftc.teamcode.pedroPathing.pathGeneration.Vector;
 
+
 /**
  * This is the OTOSLocalizer class. This class extends the Localizer superclass and is a
  * localizer that uses the SparkFun OTOS. The diagram below, which is modified from
- * Road Runner, shows a typical set up.
  *
  * The view is from the top of the robot looking downwards.
  *
@@ -80,11 +80,11 @@ public class OTOSLocalizer extends Localizer {
         // For the OTOS, left/right is the y axis and forward/backward is the x axis, with left being
         // positive y and forward being positive x. PI/2 radians is facing forward, and clockwise
         // rotation is negative rotation.
-        otos.setOffset(new SparkFunOTOS.Pose2D(0,0,Math.PI / 2));
+        otos.setOffset(new SparkFunOTOS.Pose2D(2.175, -7.33, Math.toRadians(-179.57)));
 
         // TODO: replace these with your tuned multipliers
-        otos.setLinearScalar(1.0);
-        otos.setAngularScalar(1.0);
+        otos.setLinearScalar(0.99622);
+        otos.setAngularScalar(0.9926);
 
         otos.calibrateImu();
         otos.resetTracking();
